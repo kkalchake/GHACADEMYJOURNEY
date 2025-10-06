@@ -1,0 +1,34 @@
+      Instructions for completing home work for Lesson 1 | CS & Industrial Programming
+
+* Creates folder on the desktop *
+
+cmd: mkdir -p ~/Desktop/HomeWorkFolder
+
+
+* Changes directory to newly created folder *
+
+cmd: cd ~/Desktop/HomeWorkFolder
+
+
+* Creates new txt file in it *
+
+cmd: touch lesson1HW.txt
+
+
+* Copies text from website and saves into txt file *
+
+cmd: curl -s https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-789X.2006.00215.x > ~/Desktop/HomeWorkFolder/lesson1HW.txt
+
+
+* Verify Newly Added Changes *
+cmd: cat ~/Desktop/HomeWorkFolder/lesson1HW.txt
+
+
+* Replace word emoji with TEST and Save * 
+cmd: sed -I '' 's/Emoji/TEST/g' ~/Desktop/HomeWorkFolder/lesson1HW.txt
+
+* Verify Newly Added Changes *
+cmd: cat ~/Desktop/HomeWorkFolder/lesson1HW.txt
+
+
+
