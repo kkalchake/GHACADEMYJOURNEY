@@ -12,6 +12,8 @@
 # Author: Kamila Kalchakeeva
 # https://github.com/kkalchake
 
+# Need to split the bill? Visit https://kkalchake.github.io/fair_tip_calc/ for advanced calculations
+
 def main():
  ### Get user inputs
  bill_amount = float(input(('\nWhat is the bill amount? ')))
@@ -26,15 +28,3 @@ def main():
 if __name__ == '__main__':
    main()
 
-### Advancements in progress
-### Get the user inputs
-# number_of_people = int(input('How many people are splitting the check?'))
-# in range of number_of_people:
-#     name = input('What is your name?')
-#     ordered_for = list(input('Enter coma separated format dollar amounts for each dish you ordered))
-# takes bill_amount -> calculates all people's order total and assigns tax_amount
-# splits tax_amount + tip_amount
-# adds above to sum of each dish ordered
-### Output whole math
-# Output table with each name and how much each owe
-# Output confirmation of right math
