@@ -14,12 +14,14 @@
 
 def main():
  ### Get user inputs
- bill_amount = float(input(('What is the bill amount? ')))
+ bill_amount = float(input(('\nWhat is the bill amount? ')))
  tip_percentage = float(input(('What is the tip percentage you wish to add? ')))
 
 ### Calculate and output total bill
- total_bill = bill_amount + (bill_amount * tip_percentage / 100)
- print (f'The total bill with {tip_percentage}% tip is ${total_bill:.2f}')
+ tip_amount = (bill_amount * tip_percentage / 100)
+ total_bill = bill_amount + tip_amount
+ print (f'\n Bill breakdown: ')
+ print (f'\n Bill Amount: ${bill_amount} \n Tip: ${tip_amount:.2f}\n\n The total bill with {tip_percentage}% tip is ${total_bill:.2f}\n')
 
 if __name__ == '__main__':
    main()
