@@ -12,6 +12,8 @@
 # Author: Kamila Kalchakeeva
 # https://github.com/kkalchake
 
+# Need to split the bill? Visit https://kkalchake.github.io/fair_tip_calc/ for advanced calculations
+
 def main():
  ### Get user inputs
  bill_amount = float(input(('\nWhat is the bill amount? ')))
