@@ -12,14 +12,19 @@
 # Author: Kamila Kalchakeeva
 # https://github.com/kkalchake
 
-### Get the user inputs
-# bill_amount = float(input(('What is the bill amount?))
-# tip_percentage = float(input(('What is the tip percentage you wish to add?'))
+def main():
+ ### Get user inputs
+ bill_amount = float(input(('What is the bill amount? ')))
+ tip_percentage = float(input(('What is the tip percentage you wish to add? ')))
 
-### Calculate and output
-# float total_bill = bill_amount + (bill_amount*tip_percentage)
-# print ('The total bill with %{tip_percentage} is %{total_bill}')
+### Calculate and output total bill
+ total_bill = bill_amount + (bill_amount * tip_percentage / 100)
+ print (f'The total bill with {tip_percentage}% tip is ${total_bill:.2f}')
 
+if __name__ == '__main__':
+   main()
+
+### Advancements in progress
 ### Get the user inputs
 # number_of_people = int(input('How many people are splitting the check?'))
 # in range of number_of_people:
