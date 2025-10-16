@@ -1,0 +1,12 @@
+Instructions on automating 'git push':
+
+~ cd into your home directory 
+Create script file with .sh format
+~ touch ~/auto_git_push.sh
+
+Open the file and add the script ("I" for insert,"esq+wq+enter to save)
+~ vi auto_git_push.sh
+
+
+
+
