@@ -1,0 +1,3 @@
+Advanced version of tip calc is ready to use here https://kkalchake.github.io/fair_tip_calc/
+
+GitHub Repository is here https://github.com/kkalchake/fair_tip_calc
