@@ -1,6 +1,7 @@
 import java.util.Random;
 
-class MatrixMultiplier
+
+class MatrixMultiplierParallerProcessing
 {
 
   static final int MAX_RANDOM_VALUE = 10;
@@ -40,13 +41,17 @@ class MatrixMultiplier
     if (matrixA[0].length != matrixB.length) {
       throw new IllegalArgumentException("Number of columns in matrix A must be equal to number of rows in matrix B");
     }
+    Thread[] rowCalculators = new Thread[matrixA.length];
     for (int i = 0; i < matrixA.length; i++) {
-      for (int j = 0; j < matrixB[0].length; j++) {
-        int sum = 0;
-        for (int k = 0; k < matrixA[0].length; k++) {
-          sum += matrixA[i][k] * matrixB[k][j];
-        }
-        resultMatrix[i][j] = sum;
+      RowMultiplierThreadJob task = new RowMultiplierThreadJob(matrixA, matrixB, resultMatrix, i);
+      rowCalculators[i] = new Thread(task);
+      rowCalculators[i].start();
+    }
+    for (int i = 0; i < rowCalculators.length; i++) {
+      try {
+        rowCalculators[i].join();
+      } catch (InterruptedException e) {
+        e.printStackTrace();
       }
     }
     return resultMatrix;
@@ -60,4 +65,5 @@ class MatrixMultiplier
           System.out.println();
       }
   }
+
 }
